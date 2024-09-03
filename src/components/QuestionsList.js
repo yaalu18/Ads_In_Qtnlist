@@ -12,8 +12,10 @@ const QuestionsList = () => {
     const fetchData = async () => {
       try {
         const [questionsResponse, adsResponse] = await Promise.all([
-          axios.get('http://localhost:5000/api/questions'),
-          axios.get('http://localhost:5000/api/ads')
+          //axios.get('http://localhost:5000/api/questions'),
+          //axios.get('http://localhost:5000/api/ads')
+          axios.get('https://vercel.com/yaalu18s-projects/ads-in-qtnlist-server2/api/questions'),
+          axios.get('https://vercel.com/yaalu18s-projects/ads-in-qtnlist-server2/api/ads')
         ]);
         setQuestions(questionsResponse.data);
         setAds(adsResponse.data);
